@@ -13,6 +13,7 @@ jobs:
           node-version: 18
           registry-url: https://registry.npmjs.org/
       - run: npm ci
+      - run: npm run compile
 
       - name: Publish to VSCode marketplace
         uses: HaaLeo/publish-vscode-extension@v1
