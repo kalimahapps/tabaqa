@@ -4,6 +4,6 @@
 
 # Whitelist
 !dist/extension.js
-!dist/settings.js
+!dist/settings-merger.js
 !LICENSE
 !logo.png
