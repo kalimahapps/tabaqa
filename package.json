@@ -26,7 +26,7 @@
     ]
   },
   "scripts": {
-    "compile": "tsc -p tsconfig.json && tsc-alias -p tsconfig.json",
+    "compile": "tsc -p tsconfig.json --listFiles && tsc-alias -p tsconfig.json",
     "coverage": "c8 --clean npm run test",
     "pretest": "npm run compile",
     "test": "node ./dist/test/run-test.js",
