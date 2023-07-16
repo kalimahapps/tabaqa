@@ -3,7 +3,7 @@
   "name": "tabaqa",
   "displayName": "tabaqa",
   "description": "Extendable and nested settings for VSCode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/kalimahapps/tabaqa.git"
@@ -21,7 +21,7 @@
         "fileMatch": [
           "tabaqa.json"
         ],
-        "url": "./schema.json"
+        "url": "https://raw.githubusercontent.com/kalimahapps/tabaqa/main/schema.json"
       }
     ]
   },
