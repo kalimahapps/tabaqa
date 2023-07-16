@@ -187,7 +187,7 @@ class SettingsMerger {
 		const tabaqaFile = fs.readFileSync(settingsPath);
 		const tabaqa: Tabaqa = JSON.parse(tabaqaFile.toString());
 		const {
-			settings: workspaceSettings,
+			settings: workspaceSettings = {},
 			root,
 			extends: extendFrom,
 		} = tabaqa;
