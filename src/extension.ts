@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { SettingsMerger } from '@/settings-merger';
+import { SettingsMerger } from './settings-merger';
 
 const activate = function (context: vscode.ExtensionContext) {
 	const { workspaceFolders } = vscode.workspace;
