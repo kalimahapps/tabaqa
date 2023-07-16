@@ -1,0 +1,50 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Tabaqa",
+	"description": "Nested and extendable VSCODE settings",
+	"type": "object",
+	"additionalProperties": false,
+	"definitions": {
+		"severity": {
+			"type": "string",
+			"additionalProperties": false,
+			"oneOf": [
+				{
+					"const": "off",
+					"description": "Disable the rule completely"
+				},
+				{
+					"const": "warning",
+					"description": "Enable the rule and report it as a warning"
+				},
+				{
+					"const": "error",
+					"description": "Enable the rule and report it as an error"
+				}
+			]
+		}
+	},
+	"properties": {
+		"root": {
+			"type": "boolean",
+			"description": "If true, this is the root of the settings hierarchy",
+			"default": false
+		},
+		"extends": {
+			"type": "string",
+			"description": "Settings file to extend from. It could be a relative path, absolute path or a http url",
+			"pattern": "^.*json$",
+			"default": "",
+			"examples": [
+				"settings.json",
+				"../settings.json",
+				"https://raw.githubusercontent.com/kalimahapps/configs/main/.vscode/settings.json"
+			]
+		},
+		"settings": {
+			"description": "VScode settings",
+			"type": "object",
+			"$ref": "vscode://schemas/settings/workspace"
+		}
+	}
+}

@@ -1,0 +1,6 @@
+{
+	"extends": "../level2-base.json",
+	"settings": {
+		"workbench.activityBar.visible": false
+	}
+}

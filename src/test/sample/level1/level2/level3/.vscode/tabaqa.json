@@ -1,0 +1,6 @@
+{
+	"extends": "https://raw.githubusercontent.com/abdul-alhasany/config-files/master/.vscode/settings.json",
+	"settings": {
+		"editor.snippetSuggestions": "top"
+	}
+}

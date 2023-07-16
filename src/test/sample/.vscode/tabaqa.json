@@ -1,0 +1,10 @@
+{
+	"extends": "../base.json",
+	"root": true,
+	"settings": {
+		"workbench.tree.indent": 8,
+		"[php]": {
+			"editor.defaultFormatter": "KalimahApps.taqwim"
+		}
+	}
+}

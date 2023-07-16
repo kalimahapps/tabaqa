@@ -1,0 +1,10 @@
+{
+	"css.validate": false,
+	"editor.cursorBlinking": "expand",
+	"workbench.activityBar.visible": false,
+	"[php]": {
+		"editor.defaultFormatter": "KalimahApps.taqwim"
+	},
+	"editor.cursorStyle": "line",
+	"workbench.tree.indent": 20
+}

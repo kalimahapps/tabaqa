@@ -1,0 +1,9 @@
+# Ignore everything
+*
+*/**
+
+# Whitelist
+!dist/extension.js
+!dist/settings.js
+!LICENSE
+!logo.png

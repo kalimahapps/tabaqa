@@ -1,0 +1,10 @@
+{
+	"extends": "../level2-1-base.json",
+	"settings": {
+		"workbench.activityBar.visible": false,
+		"editor.cursorBlinking": "phase",
+		"[php]": {
+			"editor.defaultFormatter": "testing.formatter.change"
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"[php]": {
+		"editor.defaultFormatter": "testing.formatter.change"
+	},
+	"editor.autoIndent": "advanced",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"editor.cursorStyle": "line",
+	"workbench.activityBar.visible": false,
+	"workbench.tree.indent": 20,
+	"css.validate": false,
+	"editor.cursorBlinking": "phase"
+}

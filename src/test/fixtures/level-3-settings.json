@@ -1,0 +1,71 @@
+{
+	"editor.snippetSuggestions": "top",
+	"editor.cursorStyle": "line",
+	"editor.cursorBlinking": "smooth",
+	"terminal.integrated.defaultProfile.windows": "Git Bash",
+	"terminal.integrated.profiles.windows": {
+		"PowerShell": {
+			"source": "PowerShell",
+			"icon": "terminal-powershell",
+			"args": [
+				"-ExecutionPolicy",
+				"Bypass"
+			]
+		}
+	},
+	"terminal.integrated.tabs.enabled": true,
+	"editor.lineNumbers": "interval",
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/bower_components": true,
+		"**/.git": true,
+		"**/tests": true,
+		"**/.vscode": true,
+		"**/out/**": true,
+		"package-lock.json": true,
+		"**/dist": true,
+		"**/build": true,
+		"**/coverage": true,
+		"**/docs": true
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"editor.defaultFormatter": null,
+	"files.eol": "\n",
+	"search.collapseResults": "alwaysExpand",
+	"editor.formatOnType": false,
+	"editor.formatOnPaste": false,
+	"editor.formatOnSave": true,
+	"editor.autoIndent": "advanced",
+	"git.showPushSuccessNotification": true,
+	"workbench.editor.enablePreview": true,
+	"workbench.editor.enablePreviewFromQuickOpen": true,
+	"workbench.tree.indent": 20,
+	"files.trimTrailingWhitespace": true,
+	"explorer.openEditors.visible": 0,
+	"css.validate": false,
+	"scss.validate": false,
+	"editor.codeLens": true,
+	"search.quickOpen.includeHistory": false,
+	"files.exclude": {
+		"out": false
+	},
+	"typescript.tsc.autoDetect": "off",
+	"typescript.tsdk": "node_modules\\typescript\\lib",
+	"editor.stickyScroll.enabled": true,
+	"markdown.updateLinksOnFileMove.enabled": "prompt",
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"workbench.activityBar.visible": false,
+	"[php]": {
+		"editor.defaultFormatter": "KalimahApps.taqwim"
+	}
+}
