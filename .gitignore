@@ -1,5 +1,6 @@
 out
 dist
+.vscode/settings.json
 node_modules
 .vscode-test/
 *.vsix

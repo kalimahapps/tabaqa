@@ -1,6 +1,6 @@
 <h1 align="center">Tabaqa</h1>
 <p align="center">
-Extendand and nested settings for VSCode
+Extendable and nested settings for VSCode
 </p>
 <br>
 <p align="center">
@@ -56,7 +56,7 @@ If `folder-3` is opened in VSCode, the extension will look for `tabaqa.json` in 
 The `tabaqa.json` file should be a json object with the following properties (all properties are optional):
 ```json
 {
-  "extends": "path/to/json-file.json", 
+  "extends": "path/to/json-file.json",
   "root": true,
   "settings": {
 	"editor.formatOnSave": true
