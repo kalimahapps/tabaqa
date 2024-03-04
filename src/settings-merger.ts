@@ -40,8 +40,7 @@ class SettingsMerger {
 		this.finalSettings = {};
 		await this.findUpSettings(folderPath);
 
-		// only start if .vscode/tabaqa.json exists
-		console.log(`forceInheritance: ${forceInheritance}`);
+		// only start if .vscode/tabaqa.json exists or if forceInheritance is set to true in the root tabaqa.json
 		if (!fs.existsSync(`${folderPath}/.vscode/tabaqa.json`) && forceInheritance != true) {
 			return false;
 		}
