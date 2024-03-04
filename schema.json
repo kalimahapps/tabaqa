@@ -30,6 +30,11 @@
 			"description": "If true, this is the root of the settings hierarchy",
 			"default": false
 		},
+		"forceInheritance": {
+			"type": "boolean",
+			"description": "If true, then child folders do not require their own .vscode/tabaqa.json file",
+			"default": false
+		},
 		"extends": {
 			"type": "string",
 			"description": "Settings file to extend from. It could be a relative path, absolute path or a http url",

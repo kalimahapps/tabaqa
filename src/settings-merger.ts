@@ -7,9 +7,11 @@ import * as vscode from 'vscode';
 type Setting = Record<string, any | Record<string, any>>;
 type Tabaqa = {
 	root: boolean;
+	forceInheritance: boolean;
 	extends: string;
 	settings: Setting;
 };
+var forceInheritance = false;
 
 class SettingsMerger {
 	finalSettings = {} as Setting;
@@ -34,14 +36,16 @@ class SettingsMerger {
 	async start(path = '') {
 		const folderPath = path || this.folderPath;
 
-		// only start if .vscode/tabaqa.json exists
-		if (!fs.existsSync(`${folderPath}/.vscode/tabaqa.json`)) {
-			return false;
-		}
-
 		this.tabaqaFiles = [];
 		this.finalSettings = {};
 		await this.findUpSettings(folderPath);
+
+		// only start if .vscode/tabaqa.json exists
+		console.log(`forceInheritance: ${forceInheritance}`);
+		if (!fs.existsSync(`${folderPath}/.vscode/tabaqa.json`) && forceInheritance != true) {
+			return false;
+		}
+
 		this.setConfigurations();
 
 		return new Promise((resolve) => {
@@ -191,6 +195,10 @@ class SettingsMerger {
 			root,
 			extends: extendFrom,
 		} = tabaqa;
+
+		if (tabaqa.forceInheritance === true) {
+			forceInheritance = true;
+		}
 
 		if (extendFrom === undefined) {
 			this.finalSettings = this.mergeSettings(this.finalSettings, workspaceSettings);
