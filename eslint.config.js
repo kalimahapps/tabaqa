@@ -1,0 +1,1 @@
+export { default } from '@kalimahapps/eslint-config';

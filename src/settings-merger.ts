@@ -50,14 +50,14 @@ class SettingsMerger {
 	}
 
 	setConfigurations() {
-		Object.keys(this.finalSettings).forEach((key) => {
+		for (const key of Object.keys(this.finalSettings)) {
 			vscode.workspace
 				.getConfiguration()
 				.update(
 					key,
 					this.finalSettings[key]
 				);
-		});
+		}
 	}
 
 	/**
@@ -71,7 +71,7 @@ class SettingsMerger {
 	 * @return {Setting}        source with target merged in
 	 */
 	mergeSettings(source: Setting, target: Setting): Setting {
-		Object.keys(target).forEach((key) => {
+		for (const key of Object.keys(target)) {
 			// ignore language specific settings
 			// e.g. "[javascript]": { "editor.formatOnSave": true }
 			const isLanguageSpecific = /^\[.*\]$/u.test(key);
@@ -79,7 +79,7 @@ class SettingsMerger {
 			if (!isLanguageSpecific && !doesKeyExist) {
 				source[key] = target[key];
 			}
-		});
+		}
 
 		// Handle language specific settings,
 		// e.g. "[javascript]": { "editor.formatOnSave": true }
@@ -88,7 +88,7 @@ class SettingsMerger {
 		});
 
 		// Write to final settings
-		languageSpecific.forEach((key) => {
+		for (const key of languageSpecific) {
 			const languageSettings = target[key];
 
 			// Loop through language settings and check if they have been already added
@@ -104,7 +104,7 @@ class SettingsMerger {
 						languageSettings[languageSettingKey];
 				}
 			});
-		});
+		}
 
 		return source;
 	}
@@ -168,7 +168,6 @@ class SettingsMerger {
 		let mergedSettings = {} as Setting;
 
 		// Readfile and parse json
-		// eslint-disable-next-line unicorn/prefer-json-parse-buffer
 		const fileContent = fs.readFileSync(extendFromPath, 'utf8');
 		try {
 			const extendFromSettings = JSON.parse(fileContent);

@@ -2,7 +2,8 @@
 	"cSpell.allowCompoundWords": true,
 	"cSpell.language": "en,en-US",
 	"cSpell.words": [
-		"kalimahapps"
+		"kalimahapps",
+		"tabaqa"
 	],
 	"css.validate": false,
 	"editor.autoIndent": "advanced",
@@ -25,6 +26,7 @@
 	"eslint.codeAction.showDocumentation": {
 		"enable": true
 	},
+	"eslint.experimental.useFlatConfig": true,
 	"eslint.validate": [
 		"javascript",
 		"javascriptreact",

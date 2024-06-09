@@ -3,7 +3,7 @@
   "name": "tabaqa",
   "displayName": "tabaqa",
   "description": "Extendable and nested settings for VSCode",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "repository": {
     "type": "git",
     "url": "https://github.com/kalimahapps/tabaqa.git"
@@ -29,30 +29,27 @@
     "compile": "tsc -p tsconfig.json --listEmittedFiles && tsc-alias -p tsconfig.json",
     "coverage": "c8 --clean npm run test",
     "pretest": "npm run compile",
-    "test": "npm run compile && node ./dist/test/run-test.js",
+    "test": "node ./dist/test/run-test.js",
     "vscode:prepublish": "npm run compile",
     "watch": "tsc -watch -p ./"
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
-    "@kalimahapps/eslint-config": "^1.1.7",
-    "@types/glob": "^8.1.0",
+    "@kalimahapps/eslint-config": "^1.2.6",
     "@types/mocha": "^10.0.6",
     "@types/node": "^20.14.2",
     "@types/vscode": "^1.90.0",
-    "@typescript-eslint/eslint-plugin": "^5.59.1",
-    "@typescript-eslint/parser": "^5.59.1",
     "@vscode/test-electron": "^2.4.0",
-    "c8": "^7.12.0",
+    "c8": "^9.1.0",
     "c8js": "^0.5.0",
-    "eslint": "^8.39.0",
-    "glob": "^8.1.0",
+    "eslint": "^9.4.0",
+    "glob": "^10.4.1",
     "mocha": "^10.4.0",
     "nyc": "^15.1.0",
     "source-map-support": "^0.5.21",
     "ts-node": "^10.9.2",
     "tsc-alias": "^1.8.10",
-    "typescript": "^5.1.6"
+    "typescript": "^5.4.5"
   },
   "galleryBanner": {
     "color": "#2c2c32",
