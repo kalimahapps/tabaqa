@@ -9,6 +9,12 @@ import { SettingsMerger } from '@/settings-merger';
 // This point to test root in typescript
 const testRoot = path.resolve(__dirname, '..', '..', 'src', 'test');
 
+const wait = function (ms: number) {
+	return new Promise((resolve) => {
+		return setTimeout(resolve, ms);
+	});
+};
+
 const watchChanges = function (path: string) {
 	return new Promise((resolve) => {
 		const watcher = vscode.workspace.createFileSystemWatcher(path);
@@ -21,14 +27,8 @@ const watchChanges = function (path: string) {
 				// Kill watcher
 				watcher.dispose();
 				resolve(event.fsPath);
-			}, 300);
+			}, 3000);
 		});
-	});
-};
-
-const wait = function (ms: number) {
-	return new Promise((resolve) => {
-		return setTimeout(resolve, ms);
 	});
 };
 
@@ -57,7 +57,10 @@ const checkSettingsFile = async (fixtureFile: string) => {
 
 	try {
 		// wait for settings.json to be complete changes
+		// await wait(1000);
 		await watchChanges(settingsPath);
+
+		// await wait(1000);
 		let settingsContent = fs.readFileSync(settingsPath, 'utf8');
 		settingsContent = JSON.parse(settingsContent);
 

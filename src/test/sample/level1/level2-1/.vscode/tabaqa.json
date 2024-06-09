@@ -1,7 +1,7 @@
 {
 	"extends": "../level2-1-base.json",
 	"settings": {
-		"workbench.activityBar.visible": false,
+		"workbench.activityBar.location": "hidden",
 		"editor.cursorBlinking": "phase",
 		"[php]": {
 			"editor.defaultFormatter": "testing.formatter.change"

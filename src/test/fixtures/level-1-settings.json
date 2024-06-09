@@ -4,6 +4,6 @@
 	},
 	"editor.cursorStyle": "line",
 	"editor.cursorBlinking": "smooth",
-	"workbench.activityBar.visible": true,
+	"workbench.activityBar.location": "default",
 	"workbench.tree.indent": 20
 }

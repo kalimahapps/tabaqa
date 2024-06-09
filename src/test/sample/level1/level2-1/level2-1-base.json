@@ -3,6 +3,6 @@
 	"editor.cursorBlinking": "expand",
 	"editor.autoIndent": "advanced",
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true
+		"source.fixAll.eslint": "explicit"
 	}
 }

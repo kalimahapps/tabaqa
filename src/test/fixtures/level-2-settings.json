@@ -1,7 +1,7 @@
 {
 	"css.validate": false,
 	"editor.cursorBlinking": "expand",
-	"workbench.activityBar.visible": false,
+	"workbench.activityBar.location": "hidden",
 	"[php]": {
 		"editor.defaultFormatter": "KalimahApps.taqwim"
 	},

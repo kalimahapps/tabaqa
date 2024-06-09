@@ -17,6 +17,7 @@
 	"editor.lineNumbers": "interval",
 	"search.exclude": {
 		"**/node_modules": true,
+		"**/vendor": true,
 		"**/bower_components": true,
 		"**/.git": true,
 		"**/tests": true,
@@ -28,22 +29,50 @@
 		"**/coverage": true,
 		"**/docs": true
 	},
+	"eslint.codeAction.showDocumentation": {
+     "enable": true
+   },
+   "editor.minimap.enabled": false,
+    "git.inputValidationLength": 100,
+    "git.inputValidationSubjectLength": 70,
+	"workbench.colorTheme": "Jameel",
+    "workbench.iconTheme": "file-icons",
+	"gitlens.codeLens.enabled": false,
+    "cSpell.words": [
+        "kalimahapps"
+    ],
+	"tailwindCSS.emmetCompletions": true,
+   "files.autoSave": "onFocusChange",
+    "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+    "terminal.integrated.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+	"editor.lineHeight": 30,
+	"terminal.integrated.lineHeight": 1.15,
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true
+		"source.fixAll.eslint": "explicit"
 	},
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"json",
+		"jsonc",
+		"json5",
+		"vue"
+	],
+		"editor.formatOnType": false,
+	"editor.formatOnPaste": false,
+	"editor.formatOnSave": false,
 	"editor.defaultFormatter": null,
 	"files.eol": "\n",
 	"search.collapseResults": "alwaysExpand",
-	"editor.formatOnType": false,
-	"editor.formatOnPaste": false,
-	"editor.formatOnSave": true,
+
 	"editor.autoIndent": "advanced",
 	"git.showPushSuccessNotification": true,
 	"workbench.editor.enablePreview": true,
 	"workbench.editor.enablePreviewFromQuickOpen": true,
 	"workbench.tree.indent": 20,
 	"files.trimTrailingWhitespace": true,
-	"explorer.openEditors.visible": 0,
 	"css.validate": false,
 	"scss.validate": false,
 	"editor.codeLens": true,
@@ -55,6 +84,8 @@
 	"typescript.tsdk": "node_modules\\typescript\\lib",
 	"editor.stickyScroll.enabled": true,
 	"markdown.updateLinksOnFileMove.enabled": "prompt",
+	"cSpell.allowCompoundWords": true,
+	"cSpell.language": "en,en-US",
 	"[jsonc]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
@@ -64,7 +95,7 @@
 	"[scss]": {
 		"editor.defaultFormatter": "vscode.css-language-features"
 	},
-	"workbench.activityBar.visible": false,
+	"workbench.activityBar.location": "hidden",
 	"[php]": {
 		"editor.defaultFormatter": "KalimahApps.taqwim"
 	}

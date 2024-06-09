@@ -1,5 +1,5 @@
 import * as path from 'node:path';
-import { runTests } from '@vscode/test-electron';
+import { runTests, runVSCodeCommand } from '@vscode/test-electron';
 
 const posixPath = (path: string) => {
 	return path.replaceAll('\\', '/');
@@ -31,9 +31,17 @@ const main = async function () {
 			await previousPromise;
 			const extensionTestsPath = posixPath(path.resolve(__dirname, 'suite', folder, 'index.js'));
 
+			/**
+			 * Install extensions
+			 */
+			await runVSCodeCommand(['--install-extension', 'streetsidesoftware.code-spell-checker']);
+			await runVSCodeCommand(['--install-extension', 'dbaeumer.vscode-eslint']);
+			await runVSCodeCommand(['--install-extension', 'bradlc.vscode-tailwindcss']);
+			await runVSCodeCommand(['--install-extension', 'eamodio.gitlens']);
+
 			// open workspace
 			const workspacePath = folders[folder];
-			const launchArguments = [workspacePath, '--disable-extensions'];
+			const launchArguments = [workspacePath];
 
 			// Download VS Code, unzip it and run the integration test
 			await runTests({

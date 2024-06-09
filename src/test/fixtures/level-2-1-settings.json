@@ -4,10 +4,10 @@
 	},
 	"editor.autoIndent": "advanced",
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true
+		"source.fixAll.eslint": "explicit"
 	},
 	"editor.cursorStyle": "line",
-	"workbench.activityBar.visible": false,
+	"workbench.activityBar.location": "hidden",
 	"workbench.tree.indent": 20,
 	"css.validate": false,
 	"editor.cursorBlinking": "phase"
