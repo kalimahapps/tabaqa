@@ -34,13 +34,25 @@ class SettingsMerger {
 	async start(path = '') {
 		const folderPath = path || this.folderPath;
 
-		// only start if .vscode/tabaqa.json exists
+		this.tabaqaFiles = [];
+		this.finalSettings = {};
+
+		// if .vscode/tabaqa.json does not exist, then look for settings in parent folders
 		if (!fs.existsSync(`${folderPath}/.vscode/tabaqa.json`)) {
+			await this.findUpSettings(folderPath);
+			if (Object.keys(this.finalSettings).length === 0) {
+				return false;
+			}
+
+			// Ask user if they want to apply settings found in parent folders
+			const answer = await vscode.window.showInformationMessage('Tabaqa settings found in parent folders. Do you want to apply them to the workspace?', 'Yes', 'No');
+			if (answer === 'Yes') {
+				this.setConfigurations();
+			}
 			return false;
 		}
 
-		this.tabaqaFiles = [];
-		this.finalSettings = {};
+		// If .vscode/tabaqa.json exists, then process it
 		await this.findUpSettings(folderPath);
 		this.setConfigurations();
 
