@@ -27,8 +27,9 @@ const main = async function () {
 	try {
 		const extensionDevelopmentPath = path.resolve(__dirname, '../../');
 
-		await Object.keys(folders).reduce(async (previousPromise, folder) => {
-			await previousPromise;
+		for (const folder of Object.keys(folders)) {
+			console.log(`Running tests for ${folder}`);
+
 			const extensionTestsPath = posixPath(path.resolve(__dirname, 'suite', folder, 'index.js'));
 
 			/**
@@ -49,7 +50,7 @@ const main = async function () {
 				extensionTestsPath,
 				launchArgs: launchArguments,
 			});
-		}, Promise.resolve());
+		}
 	} catch (error) {
 		console.error('Failed to run tests', error);
 		process.exit(1);
