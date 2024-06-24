@@ -31,15 +31,15 @@ class SettingsMerger {
 		});
 	}
 
-	async start(path = '') {
-		const folderPath = path || this.folderPath;
+	async start(startPath = '') {
+		const folderPath = startPath || this.folderPath;
 
 		this.tabaqaFiles = [];
 		this.finalSettings = {};
 
 		// if .vscode/tabaqa.json does not exist, then look for settings in parent folders
 		if (!fs.existsSync(`${folderPath}/.vscode/tabaqa.json`)) {
-			await this.findUpSettings(folderPath);
+			await this.findUpSettings(path.dirname(folderPath));
 			if (Object.keys(this.finalSettings).length === 0) {
 				return false;
 			}
