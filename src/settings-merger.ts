@@ -27,7 +27,7 @@ class SettingsMerger {
 
 		const watcher = vscode.workspace.createFileSystemWatcher(settingsPath);
 		watcher.onDidChange((event) => {
-			this.start(event.fsPath);
+			this.start();
 		});
 	}
 

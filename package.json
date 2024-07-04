@@ -3,7 +3,7 @@
   "name": "tabaqa",
   "displayName": "tabaqa",
   "description": "Extendable and nested settings for VSCode",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "repository": {
     "type": "git",
     "url": "https://github.com/kalimahapps/tabaqa.git"
@@ -28,6 +28,7 @@
   "scripts": {
     "compile": "tsc -p tsconfig.json --listEmittedFiles && tsc-alias -p tsconfig.json",
     "coverage": "c8 --clean npm run test",
+    "package": "vsce package",
     "pretest": "npm run compile",
     "test": "node ./dist/test/run-test.js",
     "vscode:prepublish": "npm run compile",
